@@ -1,0 +1,8 @@
+com\example\bibliotheque\ws\dao\GenreDao.class
+com\example\bibliotheque\ws\model\Genre.class
+com\example\bibliotheque\ws\Server.class
+com\example\bibliotheque\ws\service\BibliothequeServiceImpl.class
+com\example\bibliotheque\ws\model\SousGenre.class
+com\example\bibliotheque\ws\service\BibliothequeService.class
+com\example\bibliotheque\ws\dao\DBUtil.class
+com\example\bibliotheque\ws\dao\SousGenreDao.class
