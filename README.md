@@ -1,9 +1,51 @@
 # Devoir_WS_SOAP
-# Prérequis
+# 🚀Prérequis
     Java 17 
     maven
     maria_db
-# Test
+# 📁Structure du Projet
+
+    Devoir_WS_SOAP/
+    ├── pom.xml                          # Configuration Maven
+    ├── README.md                        # Documentation du projet
+    └── src/
+        └── main/
+            ├── java/
+            │   └── com/example/bibliotheque/ws/
+            │       ├── dao/              # Couche d'accès aux données
+            │       │   ├── DBUtil.java   # Utilitaires de connexion DB
+            │       │   ├── GenreDao.java # DAO pour les genres
+            │       │   └── SousGenreDao.java # DAO pour les sous-genres
+            │       ├── model/            # Modèles de données
+            │       │   ├── Genre.java    # Entité Genre
+            │       │   └── SousGenre.java # Entité SousGenre
+            │       ├── service/          # Couche service
+            │       │   ├── BibliothequeService.java # Interface du service
+            │       │   └── BibliothequeServiceImpl.java # Implémentation
+            │       └── Server.java       # Point d'entrée du serveur
+            └── resources/                # Ressources de configuration
+                ├── db.properties         # Configuration base de données
+                └── schema.sql            # Script de création des tables
+# ✨Fonctionnalités
+
+    📕Gestion des Genres
+    - Ajouter un genre : Création d'un nouveau genre littéraire
+    - Lister tous les genres : Récupération de la liste complète des genres
+    - Rechercher un genre par ID : Consultation d'un genre spécifique
+    - Supprimer un genre : Suppression d'un genre et de tous ses sous-genres associés (cascade)
+
+    📚Gestion des Sous-Genres
+    - Ajouter un sous-genre : Création d'un sous-genre associé à un genre parent
+    - Lister les sous-genres par genre : Récupération des sous-genres d'un genre spécifique
+    - Lister tous les sous-genres : Consultation de l'ensemble des sous-genres
+    - Rechercher un sous-genre par ID : Consultation d'un sous-genre spécifique
+    - Supprimer un sous-genre : Suppression d'un sous-genre individuel
+
+    ⚙️Caractéristiques Techniques
+    - Service SOAP : Interface standardisée pour l'intégration
+    - Persistance MariaDB : Stockage relationnel avec contraintes d'intégrité
+    - WSDL dynamique : Description automatique du service
+# 🧪Test
 Exécutez cette commande
 
     java --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED -jar target/bibliotheque-ws-1.0.0.jar
@@ -19,7 +61,7 @@ ______________________________________________________________
 
 _______________________________________________________________
 
-# Test avec postman
+# 🧪Test avec postman
 
 Importer dans postman la bibliothèque wsdl qui se trouver au http://localhost:8080/bibliotheque?wsdl lorsque le service est lancé
 
